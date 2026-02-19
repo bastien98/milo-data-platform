@@ -1,0 +1,238 @@
+granular_category,parent_category,group_name
+Fruit Apples Pears,Fruits,Fresh Food
+Fruit Citrus,Fruits,Fresh Food
+Fruit Bananas,Fruits,Fresh Food
+Fruit Berries,Fruits,Fresh Food
+Fruit Stone,Fruits,Fresh Food
+Fruit Grapes,Fruits,Fresh Food
+Fruit Melons,Fruits,Fresh Food
+Fruit Tropical,Fruits,Fresh Food
+Fruit Dried,Fruits,Fresh Food
+Nuts,Fruits,Fresh Food
+Tomatoes,Vegetables,Fresh Food
+Salad & Leafy Greens,Vegetables,Fresh Food
+Cucumber & Peppers,Vegetables,Fresh Food
+Onions & Garlic,Vegetables,Fresh Food
+Carrots & Root Veg,Vegetables,Fresh Food
+Potatoes,Vegetables,Fresh Food
+Cabbage & Broccoli,Vegetables,Fresh Food
+Beans & Peas,Vegetables,Fresh Food
+Mushrooms,Vegetables,Fresh Food
+Zucchini & Eggplant,Vegetables,Fresh Food
+Corn,Vegetables,Fresh Food
+Fresh Herbs,Vegetables,Fresh Food
+Prepared Vegetables,Vegetables,Fresh Food
+Beef,Meat & Poultry (Raw),Fresh Food
+Pork,Meat & Poultry (Raw),Fresh Food
+Chicken,Meat & Poultry (Raw),Fresh Food
+Turkey,Meat & Poultry (Raw),Fresh Food
+Lamb,Meat & Poultry (Raw),Fresh Food
+Minced Meat,Meat & Poultry (Raw),Fresh Food
+Meat Preparations,Meat & Poultry (Raw),Fresh Food
+Offal,Meat & Poultry (Raw),Fresh Food
+Ham Cooked,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Ham Dry,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Salami & Sausage,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Pâté & Terrine,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Bacon & Lardons,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Chicken Turkey Deli,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Vegetarian Deli,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Meals Salads,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Sandwiches,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Sushi,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Hummus & Dips,Charcuterie & Salads (Preparé/Deli),Fresh Food
+Fish Fresh,Fish & Seafood,Fresh Food
+Fish Smoked,Fish & Seafood,Fresh Food
+Fish Frozen,Fish & Seafood,Fresh Food
+Shellfish,Fish & Seafood,Fresh Food
+Canned Fish,Fish & Seafood,Fresh Food
+Surimi,Fish & Seafood,Fresh Food
+Plant Milk,Dairy Eggs & Cheese,Fresh Food
+Milk Fresh,Dairy Eggs & Cheese,Fresh Food
+Milk Long Life,Dairy Eggs & Cheese,Fresh Food
+Cream,Dairy Eggs & Cheese,Fresh Food
+Yoghurt Natural,Dairy Eggs & Cheese,Fresh Food
+Yoghurt Fruit,Dairy Eggs & Cheese,Fresh Food
+Yoghurt Drinks,Dairy Eggs & Cheese,Fresh Food
+Skyr & Quark,Dairy Eggs & Cheese,Fresh Food
+Pudding & Desserts,Dairy Eggs & Cheese,Fresh Food
+Butter,Dairy Eggs & Cheese,Fresh Food
+Margarine,Dairy Eggs & Cheese,Fresh Food
+Cooking Fat,Dairy Eggs & Cheese,Fresh Food
+Cheese Hard,Dairy Eggs & Cheese,Fresh Food
+Cheese Soft,Dairy Eggs & Cheese,Fresh Food
+Cheese Blue,Dairy Eggs & Cheese,Fresh Food
+Cheese Fresh,Dairy Eggs & Cheese,Fresh Food
+Cheese Spread,Dairy Eggs & Cheese,Fresh Food
+Cheese Sliced,Dairy Eggs & Cheese,Fresh Food
+Cheese Grated,Dairy Eggs & Cheese,Fresh Food
+Cheese Belgian,Dairy Eggs & Cheese,Fresh Food
+Eggs,Dairy Eggs & Cheese,Fresh Food
+Vegan Cheese Dairy,Dairy Eggs & Cheese,Fresh Food
+Protein Shakes,Dairy Eggs & Cheese,Fresh Food
+Protein Desserts,Dairy Eggs & Cheese,Fresh Food
+Bread Fresh,Bakery,Fresh Food
+Bread Sliced,Bakery,Fresh Food
+Bread Specialty,Bakery,Fresh Food
+Wraps & Pita,Bakery,Fresh Food
+Crackers,Bakery,Fresh Food
+Croissants & Pastries,Pastries & Koffiekoeken,Fresh Food
+Cakes & Tarts,Pastries & Koffiekoeken,Fresh Food
+Waffles,Pastries & Koffiekoeken,Fresh Food
+Pasta Dry,Grains Pasta & Potatoes,Pantry & Staples
+Pasta Fresh,Grains Pasta & Potatoes,Pantry & Staples
+Rice,Grains Pasta & Potatoes,Pantry & Staples
+Noodles Asian,Grains Pasta & Potatoes,Pantry & Staples
+Couscous & Bulgur,Grains Pasta & Potatoes,Pantry & Staples
+Grains & Legumes,Grains Pasta & Potatoes,Pantry & Staples
+Canned Tomatoes,Canned & Jarred Goods,Pantry & Staples
+Canned Vegetables,Canned & Jarred Goods,Pantry & Staples
+Canned Beans,Canned & Jarred Goods,Pantry & Staples
+Canned Fruits,Canned & Jarred Goods,Pantry & Staples
+Pickles & Olives,Canned & Jarred Goods,Pantry & Staples
+Jarred Antipasti,Canned & Jarred Goods,Pantry & Staples
+Soup Canned,Canned & Jarred Goods,Pantry & Staples
+Soup Carton Fresh,Canned & Jarred Goods,Pantry & Staples
+Soup Instant,Canned & Jarred Goods,Pantry & Staples
+Pasta Sauce,Sauces Mayo & Condiments,Pantry & Staples
+Tomato Sauce & Ketchup,Sauces Mayo & Condiments,Pantry & Staples
+Mayonnaise,Sauces Mayo & Condiments,Pantry & Staples
+Mustard,Sauces Mayo & Condiments,Pantry & Staples
+Soy & Asian Sauce,Sauces Mayo & Condiments,Pantry & Staples
+BBQ Sauce,Sauces Mayo & Condiments,Pantry & Staples
+Salad Dressing,Sauces Mayo & Condiments,Pantry & Staples
+Vinegar,Sauces Mayo & Condiments,Pantry & Staples
+Olive Oil,Sauces Mayo & Condiments,Pantry & Staples
+Cooking Oil,Sauces Mayo & Condiments,Pantry & Staples
+Salt Pepper & Spices,Sauces Mayo & Condiments,Pantry & Staples
+Stock & Bouillon,Sauces Mayo & Condiments,Pantry & Staples
+Dried Herbs,Sauces Mayo & Condiments,Pantry & Staples
+Cereals,Breakfast & Cereal,Pantry & Staples
+Oatmeal,Breakfast & Cereal,Pantry & Staples
+Spreads Chocolate,Breakfast & Cereal,Pantry & Staples
+Spreads Jam,Breakfast & Cereal,Pantry & Staples
+Spreads Honey,Breakfast & Cereal,Pantry & Staples
+Spreads Peanut Nut,Breakfast & Cereal,Pantry & Staples
+Spreads Savory,Breakfast & Cereal,Pantry & Staples
+Flour,Baking & Flour,Pantry & Staples
+Sugar,Baking & Flour,Pantry & Staples
+Baking Ingredients,Baking & Flour,Pantry & Staples
+Baking Decorations,Baking & Flour,Pantry & Staples
+Chocolate Baking,Baking & Flour,Pantry & Staples
+Frozen Vegetables,Frozen Ingredients,Frozen
+Frozen Fish,Frozen Ingredients,Frozen
+Frozen Meat,Frozen Ingredients,Frozen
+Frozen Bread,Frozen Ingredients,Frozen
+Frozen Fruits,Frozen Ingredients,Frozen
+Ice Cream,Frozen Ingredients,Frozen
+Frozen Desserts,Frozen Ingredients,Frozen
+Frozen Fries,Fries & Snacks,Frozen
+Frozen Snacks,Fries & Snacks,Frozen
+Frozen Pizza,Ready Meals & Pizza,Frozen
+Frozen Meals,Ready Meals & Pizza,Frozen
+Meals Fresh,Ready Meals & Pizza,Frozen
+Pizza Fresh,Ready Meals & Pizza,Frozen
+Meat Substitute,Ready Meals & Pizza,Frozen
+Vegetarian Meals,Ready Meals & Pizza,Frozen
+Asian Food,Ready Meals & Pizza,Frozen
+Mexican Food,Ready Meals & Pizza,Frozen
+Italian Specialty,Ready Meals & Pizza,Frozen
+Middle Eastern,Ready Meals & Pizza,Frozen
+Water Still,Water,Drinks
+Water Sparkling,Water,Drinks
+Water Flavored,Water,Drinks
+Cola,Soda & Juices,Drinks
+Lemonade & Soda,Soda & Juices,Drinks
+Energy Drinks,Soda & Juices,Drinks
+Ice Tea,Soda & Juices,Drinks
+Fruit Juice,Soda & Juices,Drinks
+Vegetable Juice,Soda & Juices,Drinks
+Smoothies,Soda & Juices,Drinks
+Syrup,Soda & Juices,Drinks
+Beer Non-Alcoholic,Soda & Juices,Drinks
+Coffee Beans Ground,Coffee & Tea,Drinks
+Coffee Capsules,Coffee & Tea,Drinks
+Coffee Instant,Coffee & Tea,Drinks
+Tea,Coffee & Tea,Drinks
+Hot Chocolate,Coffee & Tea,Drinks
+Beer Pils,Alcohol,Drinks
+Beer Abbey Trappist,Alcohol,Drinks
+Beer Special,Alcohol,Drinks
+Beer White Fruit,Alcohol,Drinks
+Cider,Alcohol,Drinks
+Wine Red,Alcohol,Drinks
+Wine White,Alcohol,Drinks
+Wine Rosé,Alcohol,Drinks
+Wine Sparkling,Alcohol,Drinks
+Spirits Whisky,Alcohol,Drinks
+Spirits Gin,Alcohol,Drinks
+Spirits Vodka,Alcohol,Drinks
+Spirits Rum,Alcohol,Drinks
+Spirits Liqueur,Alcohol,Drinks
+Aperitif,Alcohol,Drinks
+Chips,Chips Nuts & Aperitif,Snacks
+Nuts Snack,Chips Nuts & Aperitif,Snacks
+Crackers Snack,Chips Nuts & Aperitif,Snacks
+Popcorn,Chips Nuts & Aperitif,Snacks
+Dried Meat Snack,Chips Nuts & Aperitif,Snacks
+Protein Bars,Chips Nuts & Aperitif,Snacks
+Cookies & Biscuits,Chocolate & Sweets,Snacks
+Chocolate Bars,Chocolate & Sweets,Snacks
+Chocolate Pralines,Chocolate & Sweets,Snacks
+Candy,Chocolate & Sweets,Snacks
+Licorice,Chocolate & Sweets,Snacks
+Gum & Mints,Chocolate & Sweets,Snacks
+Marshmallows,Chocolate & Sweets,Snacks
+Trash Bags,Waste Bags,Household
+Cleaning All-Purpose,Cleaning & Paper Goods,Household
+Cleaning Kitchen,Cleaning & Paper Goods,Household
+Cleaning Bathroom,Cleaning & Paper Goods,Household
+Cleaning Floor,Cleaning & Paper Goods,Household
+Cleaning Glass,Cleaning & Paper Goods,Household
+Cleaning WC,Cleaning & Paper Goods,Household
+Cleaning Tools,Cleaning & Paper Goods,Household
+Laundry Detergent,Cleaning & Paper Goods,Household
+Laundry Softener,Cleaning & Paper Goods,Household
+Laundry Stain Remover,Cleaning & Paper Goods,Household
+Laundry Ironing,Cleaning & Paper Goods,Household
+Toilet Paper,Cleaning & Paper Goods,Household
+Kitchen Paper,Cleaning & Paper Goods,Household
+Tissues,Cleaning & Paper Goods,Household
+Napkins,Cleaning & Paper Goods,Household
+Kitchen Accessories,Cleaning & Paper Goods,Household
+Shower Gel,Pharmacy & Hygiene,Personal Care
+Soap,Pharmacy & Hygiene,Personal Care
+Deodorant,Pharmacy & Hygiene,Personal Care
+Body Lotion,Pharmacy & Hygiene,Personal Care
+Sunscreen,Pharmacy & Hygiene,Personal Care
+Shampoo,Pharmacy & Hygiene,Personal Care
+Conditioner,Pharmacy & Hygiene,Personal Care
+Hair Styling,Pharmacy & Hygiene,Personal Care
+Hair Color,Pharmacy & Hygiene,Personal Care
+Face Care,Pharmacy & Hygiene,Personal Care
+Toothpaste,Pharmacy & Hygiene,Personal Care
+Toothbrush,Pharmacy & Hygiene,Personal Care
+Mouthwash,Pharmacy & Hygiene,Personal Care
+Shaving,Pharmacy & Hygiene,Personal Care
+Feminine Hygiene,Pharmacy & Hygiene,Personal Care
+Contraception,Pharmacy & Hygiene,Personal Care
+First Aid,Pharmacy & Hygiene,Personal Care
+Vitamins & Supplements,Pharmacy & Hygiene,Personal Care
+Pain Relief,Pharmacy & Hygiene,Personal Care
+Baby Milk,Baby & Kids,Other
+Baby Food,Baby & Kids,Other
+Baby Snacks,Baby & Kids,Other
+Diapers,Baby & Kids,Other
+Baby Care,Baby & Kids,Other
+Pet Food Dog,Pet Supplies,Other
+Pet Food Cat,Pet Supplies,Other
+Pet Treats,Pet Supplies,Other
+Pet Litter,Pet Supplies,Other
+Pet Care,Pet Supplies,Other
+Tobacco,Tobacco,Other
+Lottery & Scratch Cards,Lottery & Scratch Cards,Other
+Batteries,Other,Other
+Lightbulbs,Other,Other
+Party Supplies,Other,Other
+Flowers & Plants,Other,Other
+Other,Other,Other

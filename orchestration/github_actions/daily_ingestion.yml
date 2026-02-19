@@ -1,0 +1,48 @@
+name: Daily Ingestion
+
+on:
+  schedule:
+    # Run every day at 06:00 UTC (07:00 CET / 08:00 CEST)
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}
+
+env:
+  RAILWAY_DATABASE_URL: ${{ secrets.RAILWAY_DATABASE_URL }}
+  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+  SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+  SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+  SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+  SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+  SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Extract Railway → Snowflake RAW
+        run: python -m ingestion.railway_extract
+
+      - name: Run dbt seed (refresh lookup tables)
+        working-directory: transform
+        run: |
+          pip install dbt-snowflake
+          dbt deps
+          dbt seed
+
+      - name: Run dbt models
+        working-directory: transform
+        run: dbt run
+
+      - name: Run dbt tests
+        working-directory: transform
+        run: dbt test

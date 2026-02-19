@@ -1,0 +1,62 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('SNOWFLAKE_DATABASE', 'SCANDALICIOUS_DW') }}"
+    schema: RAW
+    description: "Raw data loaded from source systems (Railway PG, APIs)."
+    tables:
+      - name: transactions
+        description: "Transaction line items extracted from receipts by Gemini AI."
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            tests:
+              - not_null
+          - name: receipt_id
+            tests:
+              - not_null
+
+      - name: receipts
+        description: "Receipt metadata from the Scandalicious app."
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            tests:
+              - not_null
+
+      - name: users
+        description: "User accounts from Firebase Auth."
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: firebase_uid
+            tests:
+              - unique
+              - not_null
+
+      - name: user_profiles
+        description: "User profile data (demographics)."
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            description: "References users.firebase_uid (NOT users.id)."
+            tests:
+              - not_null
+
+      - name: off_products
+        description: "Product data from Open Food Facts API (Belgian products)."
+
+      - name: osm_stores
+        description: "Store locations from OpenStreetMap Overpass API."

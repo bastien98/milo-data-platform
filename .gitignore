@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Environment
+.env
+
+# dbt
+transform/target/
+transform/logs/
+transform/dbt_packages/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (don't commit large data)
+*.parquet
+*.csv.gz
+exports/output/

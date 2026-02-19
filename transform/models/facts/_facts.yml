@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    description: >
+      Core fact table. One row per item purchased.
+      Joins stg_transactions to all 5 dimensions via business keys.
+      Contains all measures: item_price, quantity, unit_price, is_premium,
+      is_discount, health_score, price_per_unit_measure.
+    columns:
+      - name: transaction_id
+        description: "Unique transaction line item ID."
+        tests:
+          - unique
+          - not_null
+      - name: date_key
+        description: "FK to dim_time."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_time')
+              field: date_key
+      - name: store_name
+        description: "FK to dim_store."
+        tests:
+          - not_null
+      - name: brand_name
+        description: "FK to dim_brand (nullable — some items have no brand)."
+      - name: granular_category
+        description: "FK to dim_category."
+        tests:
+          - not_null
+      - name: user_key
+        description: "FK to dim_user (anonymized surrogate key)."
+        tests:
+          - not_null

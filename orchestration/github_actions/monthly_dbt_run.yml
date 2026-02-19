@@ -1,0 +1,49 @@
+name: Monthly Full dbt Build
+
+on:
+  schedule:
+    # Run on the 1st of every month at 04:00 UTC
+    - cron: '0 4 1 * *'
+  workflow_dispatch: {}
+
+env:
+  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+  SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+  SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+  SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+  SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+  SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+
+jobs:
+  full-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-snowflake
+
+      - name: Install dbt packages
+        working-directory: transform
+        run: dbt deps
+
+      - name: Run dbt seed (full refresh)
+        working-directory: transform
+        run: dbt seed --full-refresh
+
+      - name: Run dbt full refresh
+        working-directory: transform
+        run: dbt run --full-refresh
+
+      - name: Run dbt tests
+        working-directory: transform
+        run: dbt test
+
+      - name: Generate dbt docs
+        working-directory: transform
+        run: dbt docs generate

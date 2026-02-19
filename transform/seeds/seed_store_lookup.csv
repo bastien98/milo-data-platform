@@ -1,0 +1,17 @@
+store_name,retailer_group,store_type,is_discounter
+Colruyt,Colruyt Group,Supermarket,true
+OKay,Colruyt Group,Compact Supermarket,true
+Bio-Planet,Colruyt Group,Organic Supermarket,false
+Cru,Colruyt Group,Premium Market,false
+Delhaize,Ahold Delhaize,Supermarket,false
+AD Delhaize,Ahold Delhaize,Franchise Supermarket,false
+Proxy Delhaize,Ahold Delhaize,Neighbourhood Store,false
+Albert Heijn,Ahold Delhaize,Supermarket,false
+Carrefour,Carrefour Group,Hypermarket,false
+Carrefour Market,Carrefour Group,Supermarket,false
+Carrefour Express,Carrefour Group,Convenience Store,false
+Lidl,Lidl,Discount Supermarket,true
+Aldi,Aldi,Discount Supermarket,true
+Intermarché,Les Mousquetaires,Supermarket,false
+Match,Louis Delhaize Group,Supermarket,false
+Spar,Spar Group,Neighbourhood Store,false

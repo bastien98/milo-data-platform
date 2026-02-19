@@ -1,0 +1,47 @@
+name: Weekly Master Data Refresh
+
+on:
+  schedule:
+    # Run every Sunday at 02:00 UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch: {}
+
+env:
+  RAILWAY_DATABASE_URL: ${{ secrets.RAILWAY_DATABASE_URL }}
+  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+  SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+  SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+  SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+  SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+  SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+  PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+
+jobs:
+  master-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Refresh Open Food Facts data
+        run: python -m ingestion.open_food_facts
+
+      - name: Refresh OpenStreetMap store data
+        run: python -m ingestion.openstreetmap
+
+      - name: Update brand embeddings
+        run: python -m master_data.brand_embeddings
+
+      - name: Run brand matcher (match new brands)
+        run: python -m master_data.brand_matcher
+
+      - name: Run store enricher
+        run: python -m master_data.store_enricher

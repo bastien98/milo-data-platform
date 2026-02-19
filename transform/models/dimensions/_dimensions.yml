@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: dim_time
+    description: >
+      Date dimension with Belgian calendar attributes.
+      Generated as a date spine from the earliest transaction to today.
+      Includes week, month, quarter, year, weekend flag, and Belgian holiday flag.
+    columns:
+      - name: date_key
+        description: "Date in YYYY-MM-DD format (primary key)."
+        tests:
+          - unique
+          - not_null
+      - name: is_belgian_holiday
+        description: "True if the date is an official Belgian public holiday."
+
+  - name: dim_store
+    description: >
+      Store dimension. Combines seed_store_lookup (manual: retailer_group, is_discounter)
+      with OSM data (API: lat/lng, city, province). Stores not in OSM still appear
+      with null location fields.
+    columns:
+      - name: store_name
+        description: "Store chain name as extracted from receipts (primary key)."
+        tests:
+          - unique
+          - not_null
+      - name: retailer_group
+        tests:
+          - not_null
+
+  - name: dim_brand
+    description: >
+      Brand dimension. Combines seed_brand_lookup (manual: is_private_label, retailer_owner)
+      with Open Food Facts data (API: nutriscore, manufacturer). Unmatched brands
+      default to is_private_label = false.
+    columns:
+      - name: brand_name
+        description: "Canonical brand name (primary key)."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_category
+    description: >
+      Category dimension from seed_category_hierarchy.csv.
+      Three-level hierarchy: group → parent → granular.
+      Excludes analytics-excluded categories (Promos, Deposits).
+    columns:
+      - name: granular_category
+        description: "Most specific category level (primary key)."
+        tests:
+          - unique
+          - not_null
+      - name: parent_category
+        tests:
+          - not_null
+      - name: group_name
+        tests:
+          - not_null
+
+  - name: dim_user
+    description: >
+      User dimension with anonymized demographics.
+      Replaces user_id with a surrogate key. Strips PII (names, email).
+      panel_weight defaults to 1.0 (future: compute from demographics vs census).
+    columns:
+      - name: user_key
+        description: "Surrogate key (MD5 hash of user_id)."
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        tests:
+          - unique
+          - not_null

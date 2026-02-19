@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: mart_category_performance
+    description: >
+      THE CORE DATA PRODUCT.
+      Monthly category performance at grain: month × granular_category × store × brand.
+      Contains 14 metrics including penetration, purchase frequency, market share,
+      and pricing intelligence. Joined with dimension attributes for client-friendly output.
+    columns:
+      - name: year_month
+        tests:
+          - not_null
+      - name: granular_category
+        tests:
+          - not_null
+      - name: store_name
+        tests:
+          - not_null
+
+  - name: mart_daily_category_store
+    description: >
+      Daily aggregation at a broader grain: day × parent_category × store.
+      Suitable for trend analysis where daily resolution is needed.
+      Broader grain ensures sufficient cell size.
+    columns:
+      - name: date_key
+        tests:
+          - not_null
+      - name: parent_category
+        tests:
+          - not_null
+      - name: store_name
+        tests:
+          - not_null
+
+  - name: mart_panel_summary
+    description: >
+      Monthly panel health dashboard.
+      Tracks active users, receipt volume, store coverage, and data quality.
+      Used internally to monitor panel health.
+    columns:
+      - name: year_month
+        tests:
+          - unique
+          - not_null

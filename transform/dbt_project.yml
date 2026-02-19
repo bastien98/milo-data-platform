@@ -1,0 +1,34 @@
+name: 'scandalicious_dw'
+version: '1.0.0'
+config-version: 2
+
+profile: 'scandalicious'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+# Route each model folder to its own Snowflake schema
+models:
+  scandalicious_dw:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    dimensions:
+      +schema: dimensions
+      +materialized: table
+    facts:
+      +schema: facts
+      +materialized: table
+    marts:
+      +schema: marts
+      +materialized: table
+
+seeds:
+  +schema: seeds

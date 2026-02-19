@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: >
+      Cleaned transaction line items. Filters out non-COMPLETED receipts,
+      deposits, and promo discount lines. Handles legacy category migration.
+    columns:
+      - name: transaction_id
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: store_name
+        tests:
+          - not_null
+      - name: granular_category
+        tests:
+          - not_null
+      - name: item_price
+        tests:
+          - not_null
+
+  - name: stg_receipts
+    description: >
+      Cleaned receipts with parsed store_branch. Only includes COMPLETED receipts.
+    columns:
+      - name: receipt_id
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: store_name
+        tests:
+          - not_null
+
+  - name: stg_users
+    description: >
+      Users joined with user_profiles via firebase_uid FK.
+      Contains anonymized demographics.
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_brands_off
+    description: >
+      Cleaned brand data from Open Food Facts. One row per distinct brand.
+    columns:
+      - name: brand_name
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_stores_osm
+    description: >
+      Cleaned store location data from OpenStreetMap.
+    columns:
+      - name: osm_id
+        tests:
+          - unique
+          - not_null
