@@ -23,8 +23,17 @@ from ingestion.snowflake_loader import execute_query
 logger = logging.getLogger(__name__)
 
 MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
-CONFIDENCE_THRESHOLD = 0.85
+CONFIDENCE_THRESHOLD = 0.95
 TOP_K = 3
+BRAND_IGNORE_CSV = "transform/seeds/seed_brand_ignore.csv"
+
+
+def load_ignored_brands() -> set[str]:
+    """Load the set of brand strings to skip (already reviewed, not real brands)."""
+    df = pd.read_csv(BRAND_IGNORE_CSV)
+    ignored = set(df["ignored_brand"].str.lower().str.strip())
+    logger.info("Loaded %d ignored brands from %s", len(ignored), BRAND_IGNORE_CSV)
+    return ignored
 
 
 def get_unmatched_brands() -> list[str]:
@@ -110,6 +119,17 @@ def run():
     unmatched = get_unmatched_brands()
     if not unmatched:
         logger.info("No unmatched brands found. Done.")
+        return
+
+    # Filter out ignored brands (already reviewed, not real brands)
+    ignored = load_ignored_brands()
+    before_count = len(unmatched)
+    unmatched = [b for b in unmatched if b.lower().strip() not in ignored]
+    skipped = before_count - len(unmatched)
+    if skipped:
+        logger.info("Skipped %d ignored brands, %d remaining", skipped, len(unmatched))
+    if not unmatched:
+        logger.info("All unmatched brands are in the ignore list. Done.")
         return
 
     # Load model and index
